@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</html>
+
+<body>
+    <h2>Here is the description of your clothing</h2>
+    {% for value in values %}
+    <h4>Tip: {{value.tip}}</h4>
+    <h4>Brand: {{value.brand}}</h4>
+    <h3>Description: {{value.description}}</h3>
+    {% endfor %}
+</body>

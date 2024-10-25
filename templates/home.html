@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css">
+
+<body>
+    <title>Catalog</title>
+    <h1>Catalog Clothing</h1>
+    <button type="button" class="button" onclick="window.location.href='/search'">Search Clothing</button><br><br>
+    <button type="button" class="button" onclick="window.location.href='/addclothing'">Add Clothing</button><br><br>
+    <table class="style_table">
+        <thead>
+            <tr>
+                <th>Nr</th>
+                <th>Tip</th>
+                <th>Brand</th>
+                <th>Details</th>
+            </tr>
+        </thead>
+        {% for column in result %}
+        <tbody>
+            <td>{{column.nr}}</td>
+            <td>{{column.tip}}</td>
+            <td>{{column.brand}}</td>
+            <td><button class="button_description" onclick="window.location.href='/description/{{column.tip}}'">Description</button></td>
+        </tbody>
+        {% endfor %}
+    </table>
+</body>
+</head>
+</html>

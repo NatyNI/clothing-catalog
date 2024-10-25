@@ -1,0 +1,4 @@
+.style_table,th,td{
+    border: 3px solid blue;
+    border-collapse: collapse;
+}
